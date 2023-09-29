@@ -37,7 +37,6 @@ ever_married {No or Yes} : Patients who haven't been married in their lives will
 work_type {children, Govt_jov, Never_worked, Private or Self-employed} : patients that Never_worked are undiagnosed, children don't have a stroke, Patients who have private jobs are more likely to develop stroke than self_employed or patient with govermental jobs, may be they are more stressed by their work schedules.
 Residence_type {Rural, Urban} : Urban life induce stroke more than rural life.
 smoking_status {formerly smoked, never smoked, smokes or occasional smoker}: patients how have never smoked are more likely to be spared from stroke although in some cases related to life quality they may develop stroke.
-
 Categorical Feature Inspection :
 ![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/48b9e494-08ae-4f76-943b-f9e932c32463)
 
