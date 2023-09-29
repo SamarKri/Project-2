@@ -3,10 +3,10 @@
 Samar Krimi
 ## Business Problem :
 A healthcare prediction to predict whether a patient is likely to get stroke. Stroke can be very hard to predict and therefore try to hinder, because it is the result of many different pathophysiologies.
-# Source of data : 
+## Source of data : 
 healthcare-dataset-stroke-data.csv
 Here is the link for where the data is found from kaggle: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
-# Attribute Information :
+  ## Attribute Information :
 1) id: unique identifier
 2) gender: "Male", "Female" or "Other"
 3) age: age of the patient
@@ -20,19 +20,44 @@ Here is the link for where the data is found from kaggle: https://www.kaggle.com
 11) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
 *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
 12) stroke: 1 if the patient had a stroke or 0 if not
-# Data Description : 
+## Data Description : 
 This is a healthcare dataset used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. This is a binary classification problem.
 There are 2 possible classes : predict stroke (target): 1 if the patient had a stroke or 0 if not. These classes are highly unbalanced.
 The data contains 12 attributes (columns or features) and 5110 observations (rows), each row represents a specific patient. 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 
-# Analytical Insights Data Analysis
+## Analytical Insights Data Analysis
 
-Numeric Feature Inspection :
+### Numeric Feature Inspection :
 
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/c37d16c0-6170-4577-9ed2-1ccfa4d10fc2)
 
-Observations : 
+* Observations :
+
+- For bmi Feature vs. Target :
+
+I would expect this feature to be a classificator of the target: I think it's important to know about its body mass index to avoid certain diseases due to obesity.
+
+This feature doesn't appear to be a classificator of the target because it has a very low correlation with it, diagnosis based on body mass index is not very relevant to determine if the patient will have a stroke.
+
+- For age Feature vs. Target :
+
+I would expect this feature to be a classificator of the target: I think stroke increases with age, patients who are more than 45 are most likely to develop a stroke.
+
+This feature doesn't appear to be a classificator of the target because it has a low correlation with it.
+
+- For avg_glucose_level vs. Target Observations:
+
+I would expect this feature to be a classificator of the target: I think it's important to know about its average glucose level in blood to avoid diabetes which is a serious chronic disease, the most important Average glucose level in blood is between 60 and 100.
+
+This feature doesn't appear to be a classificator of the target because it has a very low correlation with it.
+
+
+### Categorical Feature Inspection :
+
+![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/48b9e494-08ae-4f76-943b-f9e932c32463)
+
+* Observations : 
 
 - gender {Male, Female} : Stroke targets male patients more than females.
   
@@ -47,7 +72,3 @@ hypertension {0 if the patient doesn't have hypertension, 1 if the patient has h
 - Residence_type {Rural, Urban} : Urban life induce stroke more than rural life.
   
 - smoking_status {formerly smoked, never smoked, smokes or occasional smoker}: patients how have never smoked are more likely to be spared from stroke although in some cases related to life quality they may develop stroke.
-
-Categorical Feature Inspection :
-![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/48b9e494-08ae-4f76-943b-f9e932c32463)
-
