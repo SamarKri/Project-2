@@ -28,7 +28,6 @@ The data contains 12 attributes (columns or features) and 5110 observations (row
 
 # Analytical Insights Data Analysis
 Numeric Feature Inspection :
-
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/c37d16c0-6170-4577-9ed2-1ccfa4d10fc2)
 
 Observations : 
