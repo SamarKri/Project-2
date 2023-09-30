@@ -1,12 +1,16 @@
 # Healthcare Prediction
+
 ## Author : 
 Samar Krimi
+
 ## Business Problem :
 A healthcare prediction to predict whether a patient is likely to get stroke. Stroke can be very hard to predict and therefore try to hinder, because it is the result of many different pathophysiologies.
+
 ## Source of data : 
 healthcare-dataset-stroke-data.csv
 Here is the link for where the data is found from kaggle: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
-  ## Attribute Information :
+  
+## Attribute Information :
 1) id: unique identifier
 2) gender: "Male", "Female" or "Other"
 3) age: age of the patient
@@ -20,13 +24,13 @@ Here is the link for where the data is found from kaggle: https://www.kaggle.com
 11) smoking_status: "formerly smoked", "never smoked", "smokes" or "Unknown"*
 *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
 12) stroke: 1 if the patient had a stroke or 0 if not
+  
 ## Data Description : 
 This is a healthcare dataset used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. This is a binary classification problem.
 There are 2 possible classes : predict stroke (target): 1 if the patient had a stroke or 0 if not. These classes are highly unbalanced.
 The data contains 12 attributes (columns or features) and 5110 observations (rows), each row represents a specific patient. 
-## Exploratory Data Analysis :
 
-## Analytical Insights Data Analysis :
+## Exploratory Data Analysis :
 
 ### Numeric Feature Inspection :
 
@@ -73,20 +77,37 @@ hypertension {0 if the patient doesn't have hypertension, 1 if the patient has h
   
 - smoking_status {formerly smoked, never smoked, smokes or occasional smoker}: patients how have never smoked are more likely to be spared from stroke although in some cases related to life quality they may develop stroke.
 
+## Model Developpement
+We will evaluate 4 types of Models on train & test data with Classification Report, Normalized Confusion Matrix & ROC curves :
+2 Sequential Models :
+        LGBMClassifier
+        XGBClassifier
+
+2 Ensemble Sequential Models :
+        ensemble.AdaBoostClassifier
+        ensemble.GradientBoostingClassifier
+
+2 Linear Models :
+        linear_model.LogisticRegression
+        linear_model.SGDClassifier
+
+2 Ensemble Parallel Models :
+        ensemble.BaggingClassifier
+        ensemble.RandomForestClassifier
+
+--> for LGBMClassifier & XGBClassifier, I will evaluate the default models without any regularization.
+--> for AdaBoostClassifier & GradientBoostingClassifier, I will tunned some hyperparameters with RandomizedSearchCV.
+--> for LogisticRegression & SGDClassifier, I will use Class Weights to tell the relative importance of each class, using class_weight='balanced'.
+
 ## Best Model 
 LGBMClassifier & XGBClassifier are the best predictive models for stroke target we choose LGBMClassifier because it detects highly FN=0.94 (the most problemetic) with AUC=0.82 on test set and perfect AUC=1 on train set.
-
-Best Model Metrics :
-classification_report 
-ConfusionMatrixDisplay
-RocCurveDisplay
-
+![image](https://github.com/SamarKri/Project-2/assets/136517111/da462f05-9b08-4832-ad64-190204ec3369)
 
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/18d21984-f2b0-4b55-9bbf-e69262c89261)
 
 ![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/7da09430-44cd-4544-b4fc-414f4a022b1f)
 
-
-
 ## Recommendations :
-A summary with at least 2 recommendations for your stakeholders, based on your model performance AND analytical findings.
+My "production" model is LGBMClassifier that will be tunned with RandomizedSearchCV & Regularized by Ridge/Lasso/ElasticNet in order to improve the model classification performance.
+
+- Stroke targets male patients more than females. They must check frequently their high blood pressure, get treated early if they have cardiovascular disease or get tested regularly, stop smoking, avoid conflicts between spouses and stressful jobs, explore rural life more often and have healthy life quality.
