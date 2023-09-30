@@ -81,8 +81,7 @@ classification_report
 ConfusionMatrixDisplay
 RocCurveDisplay
 
-![image](https://github.com/SamarKri/Project-2/assets/136517111/c494ac5f-f775-4330-b5a6-cbf657a5e5a8)
-
+![image](https://github.com/SamarKri/Project-2/assets/136517111/59e35713-9cd3-4a63-87ce-2f6bf625bc16)
 
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/18d21984-f2b0-4b55-9bbf-e69262c89261)
 
