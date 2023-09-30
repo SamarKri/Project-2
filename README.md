@@ -1,3 +1,5 @@
+![Multivariate Visualization for Numeric Features](https://github.com/SamarKri/Project-2/assets/136517111/b1039963-e6ed-4640-816c-90ec24440ad2)
+![Multivariate Visualization for Categorical Features](https://github.com/SamarKri/Project-2/assets/136517111/6f743408-6f1b-4671-913a-499512381ea2)
 # Healthcare Prediction
 
 ## Author : 
