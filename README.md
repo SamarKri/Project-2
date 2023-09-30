@@ -96,7 +96,9 @@ We will evaluate 4 types of Models on train & test data with Classification Repo
         ensemble.RandomForestClassifier
 
 --> for LGBMClassifier & XGBClassifier, I will evaluate the default models without any regularization.
+
 --> for AdaBoostClassifier & GradientBoostingClassifier, I will tunned some hyperparameters with RandomizedSearchCV.
+
 --> for LogisticRegression & SGDClassifier, I will use Class Weights to tell the relative importance of each class, using class_weight='balanced'.
 
 ## Best Model 
