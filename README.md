@@ -24,15 +24,15 @@ Here is the link for where the data is found from kaggle: https://www.kaggle.com
 This is a healthcare dataset used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relavant information about the patient. This is a binary classification problem.
 There are 2 possible classes : predict stroke (target): 1 if the patient had a stroke or 0 if not. These classes are highly unbalanced.
 The data contains 12 attributes (columns or features) and 5110 observations (rows), each row represents a specific patient. 
-## Exploratory Data Analysis
+## Exploratory Data Analysis :
 
-## Analytical Insights Data Analysis
+## Analytical Insights Data Analysis :
 
 ### Numeric Feature Inspection :
 
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/c37d16c0-6170-4577-9ed2-1ccfa4d10fc2)
 
-* Observations :
+#### Observations :
 
 - For bmi Feature vs. Target :
 
@@ -57,7 +57,7 @@ This feature doesn't appear to be a classificator of the target because it has a
 
 ![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/48b9e494-08ae-4f76-943b-f9e932c32463)
 
-* Observations : 
+#### Observations : 
 
 - gender {Male, Female} : Stroke targets male patients more than females.
   
@@ -72,3 +72,16 @@ hypertension {0 if the patient doesn't have hypertension, 1 if the patient has h
 - Residence_type {Rural, Urban} : Urban life induce stroke more than rural life.
   
 - smoking_status {formerly smoked, never smoked, smokes or occasional smoker}: patients how have never smoked are more likely to be spared from stroke although in some cases related to life quality they may develop stroke.
+
+## Best Model 
+LGBMClassifier & XGBClassifier are the best predictive models for stroke target we choose LGBMClassifier because it detects highly FN=0.94 (the most problemetic) with AUC=0.82 on test set and perfect AUC=1 on train set.
+
+Best Model Metrics :
+classification_report 
+ConfusionMatrixDisplay
+RocCurveDisplay
+![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/18d21984-f2b0-4b55-9bbf-e69262c89261)
+
+
+## Recommendations :
+A summary with at least 2 recommendations for your stakeholders, based on your model performance AND analytical findings.
