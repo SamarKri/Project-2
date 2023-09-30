@@ -103,7 +103,9 @@ We will evaluate 4 types of Models on train & test data with Classification Repo
 
 ## Best Model 
 LGBMClassifier & XGBClassifier are the best predictive models for stroke target we choose LGBMClassifier because it detects highly FN=0.94 (the most problemetic) with AUC=0.82 on test set and perfect AUC=1 on train set.
-![image](https://github.com/SamarKri/Project-2/assets/136517111/da462f05-9b08-4832-ad64-190204ec3369)
+
+![image](https://github.com/SamarKri/Project-2/assets/136517111/e3529769-2d9d-4ba9-af2b-d11fd8f0aab1)
+
 
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/18d21984-f2b0-4b55-9bbf-e69262c89261)
 
