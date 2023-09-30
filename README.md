@@ -80,7 +80,14 @@ Best Model Metrics :
 classification_report 
 ConfusionMatrixDisplay
 RocCurveDisplay
+
+![image](https://github.com/SamarKri/Project-2/assets/136517111/c494ac5f-f775-4330-b5a6-cbf657a5e5a8)
+
+
 ![Sans titre](https://github.com/SamarKri/Project-2/assets/136517111/18d21984-f2b0-4b55-9bbf-e69262c89261)
+
+![Sans titre-1](https://github.com/SamarKri/Project-2/assets/136517111/7da09430-44cd-4544-b4fc-414f4a022b1f)
+
 
 
 ## Recommendations :
